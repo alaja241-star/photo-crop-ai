@@ -3,6 +3,7 @@ import crypto from 'crypto';
 import type { HydratedDocument } from 'mongoose';
 import User, { type IUser, type IUserMethods } from '../models/User.js';
 import config from '../config/index.js';
+import { sendPasswordResetConfirmationEmail } from '../services/emailService.js';
 
 type UserDoc = HydratedDocument<IUser, IUserMethods>;
 
